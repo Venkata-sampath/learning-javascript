@@ -35,7 +35,7 @@ const myFunction = function(){
 }// function
 
 
-console.log(typeof myFunction)
+// console.log(typeof myFunction)
 //typeof() method is used for getting the datatype of a variable
 //number => number
 //string => string
@@ -48,3 +48,27 @@ console.log(typeof myFunction)
 //array => object
 //object => object
 //function => function
+
+
+// **********************************Memory Allocation**********************************
+
+//Stack (Primitive), Heap (Non Primitive)
+
+let myYoutubeName = "Sampathdotcome"// values are stored in stack
+let anotherName = myYoutubeName // A copy is given to the variable anotherName
+anotherName = "chaiAurCode"
+
+// console.log(myYoutubeName)
+// console.log(anotherName)
+
+let userOne = { //values are stored in heap 
+    email: "userOne@google.com",
+    upi: "user@ybl"
+}
+
+let userTwo = userOne// userTwo can directly access the object with reference
+
+userTwo.email="sampath@google.com"
+
+console.log(userOne.email)
+console.log(userTwo.email)
