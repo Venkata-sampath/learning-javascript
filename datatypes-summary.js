@@ -58,8 +58,8 @@ let myYoutubeName = "Sampathdotcome"// values are stored in stack
 let anotherName = myYoutubeName // A copy is given to the variable anotherName
 anotherName = "chaiAurCode"
 
-// console.log(myYoutubeName)
-// console.log(anotherName)
+// console.log(myYoutubeName) // "Sampathdotcom"
+// console.log(anotherName)// "chaiAurCode"
 
 let userOne = { //values are stored in heap 
     email: "userOne@google.com",
@@ -70,5 +70,5 @@ let userTwo = userOne// userTwo can directly access the object with reference
 
 userTwo.email="sampath@google.com"
 
-console.log(userOne.email)
-console.log(userTwo.email)
+// console.log(userOne.email)//"sampath@gmail.com"
+// console.log(userTwo.email)//"sampath@gmail.com"
