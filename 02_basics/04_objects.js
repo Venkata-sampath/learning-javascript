@@ -46,8 +46,39 @@ const users = [
 // console.log(users[1].email)
 // console.log(tinderUser)
 
-console.log(Object.keys(tinderUser))
-console.log(Object.values(tinderUser))
-console.log(Object.entries(tinderUser))
+// console.log(Object.keys(tinderUser))
+// console.log(Object.values(tinderUser))
+// console.log(Object.entries(tinderUser))
 
-console.log(tinderUser.hasOwnProperty("isLogged"))
+// console.log(tinderUser.hasOwnProperty("isLogged"))
+
+// ***********************************destructuring*******************************
+
+const course = {
+    course: "js in hindi",
+    price: "999",
+    courseInstructor: "hitesh"
+}
+
+// course.courseInstructor
+
+const {courseInstructor: instructor} = course
+
+// console.log(courseInstructor)
+
+console.log(instructor)
+
+//JSON is used for communicating between client and server in web
+//JSON is an object
+// {
+//     "name": "sampath",
+//     "age": "21"
+//     "email": "sampath@gmail.com"
+// }
+
+//objects within arrays as JSON 
+// [
+//     {},
+//     {},
+//     {}
+// ]
