@@ -6,5 +6,6 @@
 })(); // ; used for ending the function
 
 ((name)=>{
+    //simple iife
     console.log(`DB connected Two ${name}`)
 })("sampath") // pass argument here
