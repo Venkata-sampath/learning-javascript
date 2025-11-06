@@ -45,7 +45,7 @@ function addOne(num){
     return num+1
 }
 
-console.log(addTwo(4))
+console.log(addTwo(4))// hoisting concept intro
 
 const addTwo = function(num){
     return num+2
