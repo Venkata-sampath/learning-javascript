@@ -1,15 +1,15 @@
-"use strict" // means treat all js code as newer version
+// to state all the js code is in new version mention
+// "use strict"
 
-alert(3+2) // gives a popup in browser but we are using nodejs not browser
+// alert(3+2) // gives a popup in browser but we are using nodejs not browser
 
 // code readability should be high
-
-// bad code 
+// bad code ex:
 console.log(3
     +
     3)
 
-// good code
+// good code ex:
 console.log("sampath")
 
 
