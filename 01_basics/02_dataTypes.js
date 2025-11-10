@@ -1,12 +1,19 @@
-"use strict"; // treat all js code as newer version
+"use strict" // means treat all js code as newer version
 
-// alert(3+2) // we are using nodejs not browser
+alert(3+2) // gives a popup in browser but we are using nodejs not browser
 
+// code readability should be high
+
+// bad code 
 console.log(3
     +
-    3)// code readability should be high
+    3)
 
+// good code
 console.log("sampath")
+
+
+// ************************************datatypes*************************************
 
 let name = "sampath"
 let age = 21
@@ -14,6 +21,7 @@ let isLoggedIn = true
 let state;
 
 //primitive data types
+
 //number => upto 2^53
 //bigint
 //string => ""
@@ -22,7 +30,7 @@ let state;
 //undefined
 //symbol => unique
 
-//object => no primitive datatype
+//object => non primitive datatype
 
-console.log(typeof undefined) //undefined
-console.log(typeof null) // object
+console.log(typeof undefined) // output: undefined
+console.log(typeof null) // output: object
