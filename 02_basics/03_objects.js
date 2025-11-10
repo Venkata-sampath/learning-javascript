@@ -19,10 +19,10 @@ const JsUser = {
 // console.log(JsUser.email)
 // console.log(JsUser["email"])
 // console.log(JsUser["full name"])
-// console.log(typeof JsUser[mySym])
+// console.log(typeof JsUser[mySym]) // output: string
 
 JsUser.email="sampath@chatgpt.com"
-// Object.freeze(JsUser)
+// Object.freeze(JsUser) // stops all changes in object
 JsUser.email ="sampath@microsoft.com"
 // console.log(JsUser)
 
@@ -33,6 +33,8 @@ JsUser.greetingTwo = function(){
     console.log(`Hello Js User, ${this.name}`)
 }
 
-console.log(JsUser.greeting())
-console.log(JsUser.greetingTwo())
+// console.log(JsUser.greeting) // output: [Function (anonymous)] interesting!!!
+// console.log(JsUser.greeting()) // output: Hello Js User
+// console.log(JsUser.greetingTwo()) // output: Hello Js User, sampath
 
+// undefined comes after each function (interseting !!!)
