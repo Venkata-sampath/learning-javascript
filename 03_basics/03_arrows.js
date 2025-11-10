@@ -5,7 +5,7 @@ const user = {
     price: 999,
 
     welcomeMessage: function(){
-        console.log(`${this.username}, welocome to website`);
+        console.log(`${this.username}, welcome to website`);
         console.log(this)
     }
 }
@@ -14,32 +14,47 @@ const user = {
 // user.username = "sam"
 // user.welcomeMessage()
 
-// outside any block this referes to the context of node
-// console.log(this)// output: {} => node output: window object => browser
+// outside any block 'this' referes to the context of node
+// console.log(this)// output: {} => node, output: window object => browser
 
-function chaiOne(){
+// Not possible to use this keyword in functions like in object to call attributes
+// Normal functions
+
+function chai(){
+    console.log(this)
+}
+// chai() // check the output yourself
+
+function chai1(){
     let username = "sampath"
     console.log(this.username)
 }
-// chaiOne()// output: undefined
+// chai1() // output: undefined
 
-const chaiTwo = function(){
+const chai2 = function(){
     let username = "sampath"
     console.log(this.username)
 }
-// chaiTwo()// output: undefined
+// chai2()// output: undefined
 
-//Arrow function
+
+// Arrow functions
+
 const chai3 = () =>{
     let username = "sampath"
+    console.log(this)
+}
+chai3() // output: {}
+
+const chai4 = () =>{
+    let username = "sampath"
     console.log(this.username)
 }
-// chai3()// output: undefined
+// chai4() // output: undefined
 
 // const addTwo = (num1, num2)=>{
 //     return num1+num2
 // }
-// console.log(addTwo(3,4))
 
 //Implicit arrow function 
 // const addTwo = (num1,num2)=> num1+num2
@@ -51,6 +66,4 @@ const chai3 = () =>{
 // () => required to return object with arrow function
 // const addTwo = (num1,num2)=> ({username: "sampath"})
 
-
-
-console.log(addTwo(3,4))
+// console.log(addTwo(3,4))
