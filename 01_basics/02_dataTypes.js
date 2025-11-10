@@ -14,7 +14,7 @@ let isLoggedIn = true
 let state;
 
 //primitive data types
-//number => 2 to ower of 53
+//number => upto 2^53
 //bigint
 //string => ""
 //boolean => true/false
