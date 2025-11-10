@@ -30,7 +30,7 @@ console.log(url.replace('%', 'a'))// replaces a char with another char
 console.log(url.includes('th'))// returns true/false if the input is present or not
 
 const names = "sampath-hitesh-ravi"
-console.log(names.split('-'))
+console.log(names.split('-'))// splits the string based on given charater
 
 
 
