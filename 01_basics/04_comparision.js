@@ -6,7 +6,7 @@
 // console.log(1 == 2)
 // console.log(1 != 2)
 
-// interesting
+// interesting !!
 // console.log("2">1) // output: true
 
 // console.log(null>0)
