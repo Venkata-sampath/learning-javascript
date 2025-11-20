@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+
+</body>
+<script>
+    const div = document.createElement('div') // creates a new element
+    console.log(div)
+
+
+    // prefer to use setAttribute instead of direct accessing because: setAttribute directly assigns the value in the attribute whereas with .id, .className it will first fetch data and then overrides it hence taking more time
+    div.className = 'main'
+    div.id = "myId"
+    div.setAttribute("title", "generated title")
+    div.style.backgroundColor = 'green'
+    div.style.padding = "12px"
+    // div.innerText = "chai aur code"
+
+    const addText = document.createTextNode("chai aur code") // creates a new text node
+    div.appendChild(addText) // adds a child node to an element
+
+    // to make the div appear in the browser it needs to be appended as a child node to the document 
+    document.body.appendChild(div)
+
+
+    // REAL WORLD APPLICATION :
+    // the above is an example of how to create an element and this can be used as function with parameters to create multiple elements 
+
+
+</script>
+</html>
