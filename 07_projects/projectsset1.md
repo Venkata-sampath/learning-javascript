@@ -30,7 +30,6 @@ buttons.forEach((button)=>{
 ```
 
 ## project 2 solution
-
 ```javascript
 const form = document.querySelector('form');
 // if form not used and directly access height and weight, the values will be empty
@@ -60,3 +59,15 @@ form.addEventListener('submit', function (e) {
   }
 });
 ```
+
+## project 3 solution
+```javascript
+const clock = document.querySelector("#clock")
+
+// set interval has two parameters, used for repeating the function in the interval mentioned
+setInterval(function(){
+  let date = new Date();
+  clock.innerHTML = date.toLocaleTimeString();
+}, 1000)
+```
+
