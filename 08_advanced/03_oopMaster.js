@@ -69,4 +69,116 @@ let myCar = new Car("Toyota", "Corolla")
 // console.log(myCar.drive()) // own method
 
 let vehOne = new Vehicle("Toyota", "Corolla")
-console.log(vehOne.make)
+// console.log(vehOne.make)
+
+
+// Encapsulation: used for hiding and containing the data
+class BankAccount{
+    #balance = 0;
+
+    deposit(amount){
+        this.#balance += amount;
+        return this.#balance
+    }
+
+    getBalance(){
+        return `$ ${this.#balance}`
+    }
+}
+
+let account = new BankAccount()
+// console.log(account.getBalance()) // output: $ 0
+// console.log(account.balance) // output: undefined
+
+
+// Abstraction: abstracting unnecessary info while showing necessary info
+class CoffeeMachine{
+    start(){
+        return `Starting the machine...`
+    }
+
+    brewCoffee(){
+        return `Brewing Coffee`
+    }
+
+    pressStartButton(){
+        let startMsg = this.start()
+        let brewCoffeeMsg = this.brewCoffee(); 
+        return `${startMsg}\n${brewCoffeeMsg}` 
+    }
+}
+
+let myCoffee = new CoffeeMachine()
+// console.log(myCoffee.start()) // output: Starting the machine...
+// console.log(myCoffee.brewCoffee()) //output: Brewing Coffee
+
+// We can abstract it further by making it into a sinle method
+// console.log(myCoffee.pressStartButton()) // output: Starting the machine... Brewing Coffee
+
+
+// Polymorphism: having more than one form
+class Bird{
+    fly(){
+        return `Flying....`
+    }
+}
+
+class Penguin{
+    fly(){
+        return `Penguins can't fly`
+    }
+}
+
+let bird = new Bird()
+let penguin = new Penguin()
+// console.log(bird.fly()) // output: Flying....
+// console.log(penguin.fly()) //output: Penguins can't fly
+
+
+// static method: a method which is only accessible by class only
+class Calculator{
+    static add(a, b){
+        return a+b
+    }
+}
+
+// let miniCalc = new Calculator()
+// console.log(miniCalc.add()) // output: Error
+
+// only class can access static method
+// console.log(Calculator.add(2,3)) // output: 5
+
+
+// Getters and Setters: adds more control over protected attributes
+// if you want the salary to be completely hidden use #
+class Employee{
+    constructor(name, salary){
+        if(salary<0){
+            throw new Error("Salary cannot be in negative value")
+        }else{
+            this.name = name
+            this._salary = salary // _ is used before variables which will have getters and setters, its a developers practice
+        }
+    }
+
+    get salary(){
+        return this._salary
+    }
+
+    set salary(value){
+        if(value<0){
+            console.error("Invalid salary")
+        }else{
+            this._salary = value
+        }
+    }
+}
+
+let jack = new Employee("jack", 50000)
+console.log(jack._salary) // output: 50000
+
+// getters and setters dont need to have paranthesis ()
+console.log(jack.salary) // output: 50000
+
+// setters dont need to be written like a function instead follow the below way
+jack.salary = -50000 // output: Invalid salary
